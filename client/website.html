@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <button onclick="getData()">Get All Cars</button>
+
+        <form action="http://127.0.0.1y:27017/persons" method="post">
+            <input type="text" placeholder="Name" name="name">
+            <button type="submit">Submit</button>
+        </form>
+        
+
+        <script>
+            const url = 'http://localhost:8888/cars'
+            async function getData(){
+                const resp = await fetch(url)//default is get. to chane it we need to define the req type // fetch send the req. resp is the middle respones
+                const data = await resp.json()// pulling out the final data. again were reciving promise. the final data is what were getting from the router (res.json(cars))
+                console.log(data)
+            }
+
+            
+
+        </script>
+    </body>
+</html>
