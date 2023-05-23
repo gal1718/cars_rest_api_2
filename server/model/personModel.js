@@ -8,4 +8,5 @@ const personSchema = mongoose.Schema(
 )
 
 //compliling obj to model (document) and exporting person
+
 module.exports = mongoose.model('person', personSchema, 'persons')
